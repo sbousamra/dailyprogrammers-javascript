@@ -14,7 +14,7 @@ function getLuckyNumbers(input, checker, inc) {
     getLuckyNumbers(newLuckyNumbers, newChecker, inc + 1)
     console.log(newLuckyNumbers)
   } else {
-    return getLuckyNumbers
+    return newLuckyNumbers
   }
 }
 getLuckyNumbers(numbers, numbers[1], 1)
