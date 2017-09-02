@@ -1,0 +1,12 @@
+{
+  "name": "dailyprogrammers-javascript",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+  }
+}

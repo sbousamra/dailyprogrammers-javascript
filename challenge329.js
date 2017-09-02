@@ -17,8 +17,8 @@ function getLuckyNumbers(input, checker, inc) {
       }
     })
     const newChecker = newLuckyNumbers[inc + 1]
-    console.log(newLuckyNumbers)
     getLuckyNumbers(newLuckyNumbers, newChecker, inc + 1)
+    console.log(newLuckyNumbers)
   } else {
     return newLuckyNumbers
   }
