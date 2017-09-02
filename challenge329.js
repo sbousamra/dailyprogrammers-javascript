@@ -10,11 +10,11 @@ function getLuckyNumbers(input, checker, inc) {
         newLuckyNumbers.push(number)
       }
     })
-    const newChecker = newLuckyNumbers[inc + 1]
+    const newChecker = newLuckyNumbers[inc]
     getLuckyNumbers(newLuckyNumbers, newChecker, inc + 1)
     console.log(newLuckyNumbers)
   } else {
-    return newLuckyNumbers
+    return getLuckyNumbers
   }
 }
-getLuckyNumbers(numbers, numbers[1], 0)
+getLuckyNumbers(numbers, numbers[1], 1)
