@@ -1,15 +1,10 @@
 const lodash = require('lodash');
 
-const numbers = Array.from(Array(120).keys())
-const oddNumbers = lodash.filter(numbers, (current, index) => {
-  if (index % 2 !== 0) {
-    return current
-  }
-})
+const numbers = lodash.range(1, 120)
 
 function getLuckyNumbers(input, checker, inc) {
   const newLuckyNumbers = []
-  if (checker < oddNumbers.length) {
+  if (checker < input.length) {
     lodash.forEach(input, (number, index) => {
       if ((index + 1) % checker !== 0) {
         newLuckyNumbers.push(number)
@@ -22,4 +17,4 @@ function getLuckyNumbers(input, checker, inc) {
     return newLuckyNumbers
   }
 }
-getLuckyNumbers(oddNumbers, oddNumbers[1], 1)
+getLuckyNumbers(numbers, numbers[1], 0)
